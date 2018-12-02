@@ -1,3 +1,8 @@
+import Header from '../components/Header';
+
 export default () => (
-  <div>About us</div>
+  <div>
+    <Header />
+    <p>About page</p>
+  </div>
 )
