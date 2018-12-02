@@ -4,10 +4,14 @@ import thunk from 'redux-thunk';
 
 import searchReducer from './reducers/search';
 
-const allReducers = combineReducers({
-    search: searchReducer,
-});
+export default function createReduxStore(state) {
+    const reducers = {
+        search: searchReducer,
+    };
 
-const store = state => createStore(allReducers, state, composeWithDevTools(applyMiddleware(thunk)))
-
-export default store;
+    return createStore(
+        combineReducers(reducers),
+        state,
+        composeWithDevTools(applyMiddleware(thunk))
+    );
+}
