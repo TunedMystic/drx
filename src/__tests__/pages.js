@@ -21,7 +21,7 @@ describe('Page <Cart />', () => {
 });
 
 describe('Page <Index />', () => {
-    it('Should render <Index />', () => {
+    it('Should render correctly', () => {
         const { container } = renderWithRedux(<Index />);
         expect(container).toBeInTheDocument();
 
