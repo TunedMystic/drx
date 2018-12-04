@@ -11,7 +11,7 @@ class CartGrid extends Component {
         const { cartQuantity } = this.props;
         return (
             <div className='cart-grid' data-testid='cart-grid'>
-                <h3>Cart{cartQuantity > 0 ? `: ${cartQuantity} items` : null}</h3>
+                <h3 className='cart-quantity' data-testid='cart-quantity'>Cart{cartQuantity > 0 ? `: ${cartQuantity} items` : null}</h3>
                 {
                     itemIds.map(id => (
                         <CartItem
