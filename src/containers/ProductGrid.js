@@ -10,7 +10,7 @@ class ProductGrid extends Component {
     }
 
     initialFetch = () => {
-        if (isEmpty(this.props.products.productIds)) {
+        if (isEmpty(this.props.products.productsById)) {
             this.props.fetchProducts();
         }
     }
