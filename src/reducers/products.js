@@ -9,7 +9,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
     switch (action.type) {
         case MERGE_PRODUCTS:
-            return mergeProducts(state, action.data.entities.products);
+            return mergeProducts(state, action.products);
         case REMOVE_PRODUCT:
             return removeProduct(state, action.productId);
         default:

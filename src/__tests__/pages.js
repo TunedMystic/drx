@@ -1,6 +1,6 @@
 import { render } from 'react-testing-library';
 
-import Index from '../pages/index';
+// import Index from '../pages/index';
 import About from '../pages/about';
 
 // describe('Page <Index />', () => {
@@ -14,7 +14,7 @@ import About from '../pages/about';
 // });
 
 describe('Page <About />', () => {
-    it('Should render <About />', () => {
+    it('should render correctly', () => {
         const { queryByText, container } = render(<About />);
         expect(container).toMatchSnapshot();
 

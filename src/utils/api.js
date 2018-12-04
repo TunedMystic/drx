@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const allProducts = [{
+const allProducts2 = [{
     "id": "7d7fa1660fe07404a5b9981adb75fbb2",
     "name": "French Fries",
     "price": 33.61
@@ -57,8 +57,6 @@ const allProducts = [{
     "name": "Blueberry Muffin",
     "price": 15.54
 }];
-
-
 
 export default {
     products: {

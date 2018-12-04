@@ -6,7 +6,7 @@ import { productSchema } from '../schemas';
 
 const mergeProducts = (data) => ({
     type: MERGE_PRODUCTS,
-    data
+    products: data.entities.products
 });
 
 export const fetchProducts = () => dispatch => (
