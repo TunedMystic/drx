@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { removeFromCart } from '../actions/cart';
+import { getCart, getCartQuantity } from '../selectors/cart';
 import CartItem from '../components/CartItem';
 
 class CartGrid extends Component {
     render() {
         const { itemsById, itemIds } = this.props.cart;
-        const { cartItems } = this.props;
+        const { cartQuantity } = this.props;
         return (
             <div className='cart-grid' data-testid='cart-grid'>
-                <h3>Cart{cartItems > 0 ? `: ${cartItems} items` : null}</h3>
+                <h3>Cart{cartQuantity > 0 ? `: ${cartQuantity} items` : null}</h3>
                 {
                     itemIds.map(id => (
                         <CartItem
@@ -31,8 +32,8 @@ class CartGrid extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    cart: state.cart,
-    cartItems: state.cart.itemIds.map(id => state.cart.itemsById[id].quantity).reduce((a, b) => a + b, 0),
+    cart: getCart(state),
+    cartQuantity: getCartQuantity(state),
     ...ownProps
 });
 

@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { isEmpty } from 'lodash';
 
-import { fetchProducts } from '../actions/products';
 import { addToCart } from '../actions/cart';
+import { fetchProducts } from '../actions/products';
+import { getProducts } from '../selectors/products';
 import Product from '../components/Product';
 
 class ProductGrid extends Component {
@@ -41,7 +42,7 @@ class ProductGrid extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    products: state.products,
+    products: getProducts(state),
     ...ownProps
 });
 
