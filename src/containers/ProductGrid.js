@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { isEmpty } from 'lodash';
 
 import { fetchProducts, removeProduct } from '../actions/products';
+import { addToCart } from '../actions/cart';
+import Product from '../components/Product';
 
 class ProductGrid extends Component {
     componentDidMount() {
@@ -18,15 +20,21 @@ class ProductGrid extends Component {
     render() {
         const { productsById, productIds } = this.props.products;
         return (
-            <div>
-                <h3>Product Grid</h3>
-                <ul>                
-                    {
-                        productIds.map(id => (
-                            <li key={id}>{productsById[id].name}</li>
-                        ))
+            <div className='product-grid' data-testid='product-grid'>
+                {
+                    productIds.map(id => (
+                        <Product
+                            key={id}
+                            addToCart={addToCart}
+                            product={productsById[id]}
+                        />
+                    ))
+                }
+                <style jsx>{`
+                    .product-grid {
+                        width: 85vw;
                     }
-                </ul>
+                `}</style>
             </div>
         );
     }

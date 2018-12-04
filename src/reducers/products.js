@@ -13,7 +13,7 @@ export default function reducer(state = initialState, action) {
         case REMOVE_PRODUCT:
             return removeProduct(state, action.productId);
         default:
-            return initialState;
+            return state;
     };
 };
 

@@ -3,15 +3,15 @@ import { render } from 'react-testing-library';
 import Index from '../pages/index';
 import About from '../pages/about';
 
-describe('Page <Index />', () => {
-    it('Should render <Index />', () => {
-        const { queryByText, container } = render(<Index />);
-        expect(container).toMatchSnapshot();
+// describe('Page <Index />', () => {
+//     it('Should render <Index />', () => {
+//         const { queryByText, container } = render(<Index />);
+//         expect(container).toMatchSnapshot();
 
-        expect(queryByText('Index page')).toBeInTheDocument();
+//         expect(queryByText('Index page')).toBeInTheDocument();
 
-    });
-});
+//     });
+// });
 
 describe('Page <About />', () => {
     it('Should render <About />', () => {
