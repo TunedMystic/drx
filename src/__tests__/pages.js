@@ -1,29 +1,29 @@
-import { render } from 'react-testing-library';
+import renderWithRedux from '../utils/render-with-redux';
 
-// import Index from '../pages/index';
 import About from '../pages/about';
+import Cart from '../pages/cart';
+import Index from '../pages/index';
 
-// describe('Page <Index />', () => {
-//     it('Should render <Index />', () => {
-//         const { queryByText, container } = render(<Index />);
-//         expect(container).toMatchSnapshot();
-
-//         expect(queryByText('Index page')).toBeInTheDocument();
-
-//     });
-// });
-
-// describe('Page <About />', () => {
-//     it('should render correctly', () => {
-//         const { queryByText, container } = render(<About />);
-//         expect(container).toMatchSnapshot();
-
-//         expect(queryByText('About page')).toBeInTheDocument();
-//     });
-// });
-
-describe('Pages', () => {
+describe('Page <About />', () => {
     it('should render correctly', () => {
-        expect(1 + 1).toEqual(2);
+        const { queryByText, container } = renderWithRedux(<About />);
+        expect(container).toMatchSnapshot();
+
+        expect(queryByText('About page')).toBeInTheDocument();
+    });
+});
+
+describe('Page <Cart />', () => {
+    it('should render correctly', () => {
+        const { container } = renderWithRedux(<Cart />);
+        expect(container).toBeInTheDocument();
+    });
+});
+
+describe('Page <Index />', () => {
+    it('Should render <Index />', () => {
+        const { container } = renderWithRedux(<Index />);
+        expect(container).toBeInTheDocument();
+
     });
 });

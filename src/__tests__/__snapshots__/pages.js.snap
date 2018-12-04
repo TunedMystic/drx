@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page <About /> should render correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="jsx-2087558186"
+    >
+      <div
+        class="jsx-1059402298"
+      >
+        <a
+          class="jsx-1059402298"
+          data-testid="link-home"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          class="jsx-1059402298"
+          data-testid="link-about"
+          href="/about"
+        >
+          About
+        </a>
+        <a
+          class="jsx-1059402298"
+          href="/resource/1"
+        >
+          Resource
+        </a>
+      </div>
+      <a
+        class="jsx-2087558186"
+        data-testid="link-cart"
+        href="/cart"
+      >
+        Cart 
+      </a>
+    </div>
+    <p>
+      About page
+    </p>
+  </div>
+</div>
+`;
