@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const allProducts2 = [{
+const allProducts = [{
     "id": "7d7fa1660fe07404a5b9981adb75fbb2",
     "name": "French Fries",
     "price": 33.61
