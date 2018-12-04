@@ -1,8 +1,8 @@
-import Header from './Header';
+import LayoutTop from '../containers/LayoutTop';
 
 export default (props) => (
     <div>
-        <Header />
+        <LayoutTop />
         {props.children}
     </div>
 )

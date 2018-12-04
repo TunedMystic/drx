@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { isEmpty } from 'lodash';
 
-import { fetchProducts, removeProduct } from '../actions/products';
+import { fetchProducts } from '../actions/products';
 import { addToCart } from '../actions/cart';
 import Product from '../components/Product';
 
@@ -25,7 +25,7 @@ class ProductGrid extends Component {
                     productIds.map(id => (
                         <Product
                             key={id}
-                            addToCart={addToCart}
+                            addToCart={this.props.addToCart}
                             product={productsById[id]}
                         />
                     ))
@@ -47,7 +47,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapActionsToProps = {
     fetchProducts,
-    removeProduct
+    addToCart
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(ProductGrid);
