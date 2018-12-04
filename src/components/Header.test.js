@@ -1,6 +1,6 @@
 import { render } from 'react-testing-library';
 
-import Header from '../../components/Header';
+import Header from './Header';
 
 describe('Component <Header />', () => {
 
