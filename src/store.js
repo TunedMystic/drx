@@ -2,11 +2,13 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
-import searchReducer from './reducers/search';
+import cartReducer from './reducers/cart';
+import productsReducer from './reducers/products';
 
 export default function createReduxStore(state) {
     const reducers = {
-        search: searchReducer,
+        cart: cartReducer,
+        products: productsReducer
     };
 
     return createStore(

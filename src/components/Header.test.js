@@ -1,14 +1,15 @@
 import { render } from 'react-testing-library';
 
-import Header from '../../components/Header';
+import Header from './Header';
 
 describe('Component <Header />', () => {
-    it('Should render <Header />', () => {
+
+    it('should render Header', () => {
         const { container } = render(<Header />);
         expect(container).toBeInTheDocument();
     });
 
-    it('Should contain specific links', () => {
+    it('should contain specific links', () => {
         const { getByTestId, container } = render(<Header />);
 
         // Check the number of links.
