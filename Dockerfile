@@ -9,6 +9,6 @@ WORKDIR $APP_PATH
 COPY ./package.json ./package-lock.json $APP_PATH/
 
 # Install npm packages.
-RUN npm install --pure-lockfile
+RUN npm install --package-lock-only
 
 ADD . $APP_PATH
