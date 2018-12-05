@@ -1,0 +1,11 @@
+sudo: required
+node: '11.3'
+
+services:
+  - docker
+
+before_install:
+  - docker build jsanweb/drx
+
+script:
+  - docker run --rm jsanweb/drx npm run test
