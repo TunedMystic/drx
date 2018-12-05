@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component <Product /> should match snapshot 1`] = `
+<div>
+  <div
+    class="jsx-891141453 product"
+    data-testid="product"
+  >
+    <h3
+      class="jsx-891141453"
+    >
+      Pen
+    </h3>
+    <p
+      class="jsx-891141453"
+    >
+      $
+      3.99
+    </p>
+    <button
+      class="jsx-891141453 add-to-cart"
+      data-testid="add-to-cart"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>
+`;
