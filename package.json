@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "test": "jest --verbose --watch",
-    "dev": "next dev src -p 3000",
+    "dev": "next dev src -H 0.0.0.0 -p 3000",
     "build": "next build src",
     "export": "npm run build && next export src -o build"
   },
