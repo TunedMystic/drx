@@ -1,8 +1,10 @@
 sudo: required
 
-language: node
-node:
+language: node_js
+node_js:
   - '11.3'
+
+cache: npm
 
 services:
   - docker
