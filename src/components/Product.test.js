@@ -20,6 +20,11 @@ describe('Component <Product />', () => {
         expect(getByTestId('add-to-cart').textContent).toBe('Add to cart');
     });
 
+    it('should match snapshot', () => {
+        const { container } = render(<Product {...productProps} />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should call addToCart on button click', () => {
         const { getByTestId } = render(<Product {...productProps} />);
         fireEvent.click(getByTestId('add-to-cart'));
