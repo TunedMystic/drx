@@ -2,7 +2,7 @@ sudo: required
 
 language: node_js
 node_js:
-  - '11.3'
+  - stable
 
 # cache: npm
 
@@ -10,7 +10,7 @@ services:
   - docker
 
 before_install:
-  - docker build --no-cache -t jsanweb/drx .
+  - docker build -t jsanweb/drx .
 
 script:
   - docker run --rm jsanweb/drx npm run test
