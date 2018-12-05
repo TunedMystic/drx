@@ -6,6 +6,7 @@ node_js:
 
 before_cache:
   # Save tagged docker images
+  # Ref: https://github.com/s12v/sns/blob/f99fed152aca0d0566bafa5a5c3bba7442e73867/.travis.yml
   - >
     mkdir -p $HOME/docker && docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}} {{.ID}}'
     | xargs -n 2 -t sh -c 'test -e $HOME/docker/$1.tar.gz || docker save $0 | gzip -2 > $HOME/docker/$1.tar.gz'
