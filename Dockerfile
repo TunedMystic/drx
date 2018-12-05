@@ -6,7 +6,7 @@ ENV APP_PATH="/usr/src/web"
 RUN mkdir -p $APP_PATH
 WORKDIR $APP_PATH
 
-COPY ./package.json $APP_PATH/
+COPY ./package.json ./package-lock.json $APP_PATH/
 
 # Install npm packages.
 RUN npm install --pure-lockfile

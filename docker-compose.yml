@@ -9,4 +9,7 @@ services:
       - '3000:3000'
     volumes:
       - .:/usr/src/web
+      # Add extra volume for node_modules for jest performance.
+      # Ref: https://github.com/docker/for-mac/issues/1358#issuecomment-384880889
+      - /usr/src/web/node_modules
     command: npm run dev
